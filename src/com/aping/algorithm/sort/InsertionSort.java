@@ -14,10 +14,8 @@ public class InsertionSort {
         }
 
         for (int end = 1; end < arr.length; end++) {
-            int cur = end;
-            while (cur - 1 >= 0 && arr[cur - 1] > arr[cur]) {
+            for (int cur = end; cur - 1 >= 0 && arr[cur - 1] > arr[cur]; cur--) {
                 swap(arr, cur - 1, cur);
-                cur--;
             }
         }
     }
