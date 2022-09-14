@@ -8,6 +8,9 @@ public class PrintBit {
 
     public static void main(String[] args) {
         print(4);
+        print(-100000);
+        print(-100000 >> 3);
+        print(-100000 >>> 3);
     }
 
     public static void print(int num) {
