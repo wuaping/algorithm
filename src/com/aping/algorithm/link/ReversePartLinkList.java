@@ -5,7 +5,7 @@ package com.aping.algorithm.link;
  * @author Aping
  * @since 2022/9/3
  */
-public class ReversePart {
+public class ReversePartLinkList {
     public static void main(String[] args) {
 
         Node<Integer> node1 = new Node<>(1);

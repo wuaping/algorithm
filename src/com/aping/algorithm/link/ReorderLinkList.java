@@ -8,7 +8,7 @@ package com.aping.algorithm.link;
  * @author Aping
  * @since 2022/9/13 21:18
  */
-public class ReorderList {
+public class ReorderLinkList {
 
     public static void main(String[] args) {
         ListNode node1 = new ListNode(1);
