@@ -2,6 +2,7 @@ package com.aping.algorithm.link;
 
 /**
  * 反转部分单向链表
+ *
  * @author Aping
  * @since 2022/9/3
  */
@@ -21,10 +22,56 @@ public class ReversePartLinkList {
 
         node1.print();
 
-        node1 = reversePart(node1, 1, 3);
+        node1 = reversePart2(node1, 1, 5);
 
         node1.print();
     }
+
+
+    public static Node<Integer> reversePart2(Node<Integer> head, int from, int to) {
+
+        int length = 0;
+        Node<Integer> temp = head;
+        Node<Integer> fPre = null;
+        Node<Integer> toNode = null;
+        Node<Integer> tPos = null;
+        while (temp != null) {
+            length++;
+            fPre = length == from - 1 ? temp : fPre;
+            toNode = length == to ? temp : toNode;
+            tPos = length == to + 1 ? temp : tPos;
+            temp = temp.next;
+        }
+
+        toNode.next = null;
+
+        Node<Integer> rNode = reverse(fPre == null ? head : fPre.next);
+
+        if (fPre != null) {
+            fPre.next = rNode;
+        }
+        temp = rNode;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = tPos;
+
+        return fPre != null ? fPre : rNode;
+    }
+
+
+    public static Node<Integer> reverse(Node<Integer> head) {
+        Node<Integer> pre = null;
+        Node<Integer> next;
+        while (head != null) {
+            next = head.next;
+            head.next = pre;
+            pre = head;
+            head = next;
+        }
+        return pre;
+    }
+
 
     public static Node<Integer> reversePart(Node<Integer> head, int from, int to) {
         int len = 0;
