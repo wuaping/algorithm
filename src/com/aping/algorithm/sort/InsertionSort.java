@@ -1,7 +1,7 @@
 package com.aping.algorithm.sort;
 
 /**
- * 插入排序
+ * 插入排序：将当前插入到已排好序的前置部分里
  *
  * @author Aping
  * @since 2022/9/5

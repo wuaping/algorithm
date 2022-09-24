@@ -1,7 +1,7 @@
 package com.aping.algorithm.sort;
 
 /**
- * 选择排序
+ * 选择排序：寻最小放最前面
  *
  * @author Aping
  * @since 2022/9/5

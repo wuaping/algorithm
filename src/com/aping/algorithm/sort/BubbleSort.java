@@ -1,7 +1,7 @@
 package com.aping.algorithm.sort;
 
 /**
- * 冒泡排序
+ * 冒泡排序：相邻比较，大的往右移
  *
  * @author Aping
  * @since 2022/9/5
